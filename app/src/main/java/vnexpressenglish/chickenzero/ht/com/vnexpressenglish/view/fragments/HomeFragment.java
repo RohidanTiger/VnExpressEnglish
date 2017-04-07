@@ -44,7 +44,35 @@ public class HomeFragment extends BaseFragment {
 
         tabLayout.setupWithViewPager(viewPager);
 
-        viewPager.setOffscreenPageLimit(3);
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()) {
+                    case 0:
+                        context.setTitle(R.string.str_news);
+                        break;
+                    case 1:
+                        context.setTitle(R.string.str_photos);
+                        break;
+                    case 2:
+                        context.setTitle(R.string.str_toeic);
+                        break;
+                    case 3:
+                        context.setTitle(R.string.str_ielts);
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+            }
+        });
+
+        viewPager.setOffscreenPageLimit(4);
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -64,7 +92,7 @@ public class HomeFragment extends BaseFragment {
                 return new PhotosFragment();
             }
             if(position==2){
-                return new PhotosFragment();
+                return new ToeicFragment();
             }
             if(position==3){
                 return new IeltsFragment();

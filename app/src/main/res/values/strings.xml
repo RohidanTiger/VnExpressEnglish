@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">VnExpress English</string>
+
+    <string name="str_news">Học tiếng anh qua tin tức</string>
+    <string name="str_photos">Học tiếng anh qua hình ảnh</string>
+    <string name="str_toeic">Học toeic</string>
+    <string name="str_ielts">Học ielts</string>
 </resources>

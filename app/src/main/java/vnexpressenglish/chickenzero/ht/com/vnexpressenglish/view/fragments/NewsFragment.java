@@ -1,6 +1,7 @@
 package vnexpressenglish.chickenzero.ht.com.vnexpressenglish.view.fragments;
 
 import android.os.AsyncTask;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import org.jsoup.Jsoup;
@@ -12,6 +13,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.List;
 
+import butterknife.BindView;
 import vnexpressenglish.chickenzero.ht.com.vnexpressenglish.BaseFragment;
 import vnexpressenglish.chickenzero.ht.com.vnexpressenglish.R;
 
@@ -20,6 +22,9 @@ import vnexpressenglish.chickenzero.ht.com.vnexpressenglish.R;
  */
 
 public class NewsFragment extends BaseFragment{
+    @BindView(R.id.reycle_news)
+    RecyclerView mRecyclerViewNews;
+
     @Override
     protected int getViewContent() {
         return R.layout.news_fragment;
@@ -53,7 +58,7 @@ public class NewsFragment extends BaseFragment{
                 Elements datas = es.getElementsByClass("block_image_news width_common");
 
                 for(Element element : datas){
-                    Element e = element.getElementsByClass("title_news").first();
+                    Element e = element.getElementsByClass("thumb").first();
                     String title = e.getElementsByAttribute("title").attr("title");
                     String image = e.getElementsByAttribute("src").attr("src");
                     String link  = e.getElementsByAttribute("href").attr("href");
@@ -67,7 +72,6 @@ public class NewsFragment extends BaseFragment{
         }
 
         protected void onPostExecute(String feed) {
-
         }
     }
 }
