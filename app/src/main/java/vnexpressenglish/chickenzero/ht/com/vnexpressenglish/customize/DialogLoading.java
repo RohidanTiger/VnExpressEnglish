@@ -5,7 +5,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.Window;
 
-import tigerstyle.social.com.banggiaxe.R;
+import vnexpressenglish.chickenzero.ht.com.vnexpressenglish.R;
 
 
 /**

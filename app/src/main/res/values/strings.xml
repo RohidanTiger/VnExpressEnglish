@@ -5,4 +5,5 @@
     <string name="str_photos">Học tiếng anh qua hình ảnh</string>
     <string name="str_toeic">Học toeic</string>
     <string name="str_ielts">Học ielts</string>
+    <string name="str_no_intternet">Không có kết nối mạng</string>
 </resources>

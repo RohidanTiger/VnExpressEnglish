@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import tigerstyle.social.com.banggiaxe.SCApplication;
+import vnexpressenglish.chickenzero.ht.com.vnexpressenglish.SCApplication;
+
 
 /**
  * Created by billymobile on 1/24/17.
